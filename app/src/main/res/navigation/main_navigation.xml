@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/onBoardActivity2">
+    <fragment
+        android:id="@+id/onBoardFragment1"
+        android:name="com.dicoding.raihan.capstoneocean.view.onboard.OnBoardFragment1"
+        android:label="fragment_on_board1"
+        tools:layout="@layout/fragment_on_board1" >
+        <action
+            android:id="@+id/action_onBoardFragment1_to_onBoardFragment2"
+            app:destination="@id/onBoardFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment2"
+        android:name="com.dicoding.raihan.capstoneocean.view.onboard.OnBoardFragment2"
+        android:label="fragment_on_board2"
+        tools:layout="@layout/fragment_on_board2" >
+        <action
+            android:id="@+id/action_onBoardFragment2_to_welcomeActivity"
+            app:destination="@id/welcomeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/welcomeActivity"
+        android:name="com.dicoding.raihan.capstoneocean.view.welcome.WelcomeActivity"
+        android:label="activity_welcome"
+        tools:layout="@layout/activity_welcome" />
+    <activity
+        android:id="@+id/onBoardActivity2"
+        android:name="com.dicoding.raihan.capstoneocean.view.onboard.OnBoardActivity"
+        android:label="activity_on_board"
+        tools:layout="@layout/activity_on_board" />
+</navigation>
